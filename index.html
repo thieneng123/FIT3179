@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>First HTML TEST LOL</title>
+    <title>FIT3179 Data Visualization 2</title>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+
 </head>
 <body>
-    <h1>Heading 1</h1>
-    <p>My First Paragraph.</p>
+    <h1>Worldwide Happiness Report</h1>
+
+    <div class="grid-container">
+        <h2>Happiness Report of each country based on Ladder Score</h2>
+        <div class="vis-container" id="map1"></div>
+    </div>
+
+
+<script type="text/javascript">
+
+  var spec2 = "symbolmap.vg.json";
+  vegaEmbed('#map1', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</div>
 </body>
 </html>
