@@ -1,0 +1,7 @@
+Country,Region,Ladderscore,Factor,Score
+Singapore,Southeast Asia,6.377,LogGDP,1.695
+,,,Social Support,1.019
+,,,Health Life Expentancy,0.897
+,,,Freedom to make life choices,0.664
+,,,Generosity,0.176
+,,,Perception of Corruption,0.547
