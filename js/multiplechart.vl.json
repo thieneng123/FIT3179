@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Repeated chart",
+  "title": {
+    "text": "Factors affecting Ladder Score for each countries",
+    "fontSize": 16
+  },
+  "repeat": [
+    "LogGDP",
+    "Socialsupport",
+    "Healthylifeexpectancy",
+    "Freedomtomakelifechoices",
+    "Generosity",
+    "Perceptionsofcorruption"
+  ],
+  "columns": 3,
+  "spec": {
+    "data": {
+      "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/breakdownhappiness.csv"
+    },
+    "layer": [
+      {
+        "selection": {
+          "countrySelect": {
+            "type": "multi",
+            "fields": ["Country"],
+            "bind": "legend"
+          }
+        },
+        "mark": "circle",
+        "encoding": {
+          "x": {"field": {"repeat": "repeat"}},
+          "y": {"field": "Country"},
+          "color": {"field": "Country", "scale": {"scheme": "dark2"}},
+          "opacity": {
+            "condition": {"selection": "countrySelect", "value": 1},
+            "value": 0.1
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {
+              "field": {"repeat": "repeat"},
+              "type": "quantitative",
+              "title": "Score"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "config": {}
+}

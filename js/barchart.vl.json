@@ -1,0 +1,84 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bar chart",
+  "title": {
+    "text": "Ranking For Happiness of Southeast Asia countries",
+    "fontSize": 16
+  },
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/southeast-asia.csv"
+  },
+  "layer": [
+    {
+      "selection": {
+        "countrySelect": {
+          "type": "multi",
+          "fields": ["Country"],
+          "bind": "legend"
+        }
+      },
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "Ladderscore",
+          "type": "quantitative",
+          "title": "Ladder Score"
+        },
+        "x": {
+          "field": "Country",
+          "type": "nominal",
+          "sort": "-y",
+          "title": "Country"
+        },
+        "color": {
+          "field": "Country",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Cambodia",
+              "Indonesia",
+              "Laos",
+              "Malaysia",
+              "Myanmar",
+              "Philippines",
+              "Singapore",
+              "Thailand",
+              "Vietnam"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "countrySelect", "value": 1},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Ladderscore", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "top",
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Ladderscore", "type": "quantitative"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Ladderscore'] == '6.377' || datum['Ladderscore'] == '5.985' || datum['Ladderscore'] == '5.88' || datum['Ladderscore'] == '5.411' || datum['Ladderscore'] == '5.384' || datum['Ladderscore'] == '5.345' ||  datum['Ladderscore'] == '5.03' ||  datum['Ladderscore'] == '4.83' ||  datum['Ladderscore'] == '4.426'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
+  ],
+  "config": {}
+}

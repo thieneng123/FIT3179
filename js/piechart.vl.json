@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple pie chart with labels.",
+  "title": {
+    "text": "Breakdown of contribution of Happiness in Singapore ",
+    "fontSize": 16
+  },
+  "width": 600,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/sg_cleanup.csv"
+  },
+  "transform": [{"calculate": "datum.Score/4.998", "as": "Percentage"}],
+  "encoding": {
+    "theta": {"field": "Score", "type": "quantitative", "stack": true},
+    "color": {
+      "field": "Factor",
+      "type": "nominal",
+      "scale": {"scheme": "dark2"},
+      "legend": {"labelFontSize": 12, "titleFontSize": 12}
+    },
+    "tooltip": [
+      {"field": "Factor", "type": "nominal"},
+      {"field": "Score", "type": "quantitative"}
+    ]
+  },
+  "layer": [
+    {"mark": {"type": "arc", "outerRadius": 160, "stroke": "#fff"}},
+    {
+      "mark": {"type": "text", "radius": 190},
+      "encoding": {"text": {"field": "Percentage", "format": ".2%"}}
+    }
+  ],
+  "config": {}
+}
