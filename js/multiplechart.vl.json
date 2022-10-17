@@ -16,7 +16,7 @@
   "columns": 3,
   "spec": {
     "data": {
-      "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/breakdownhappiness.csv"
+      "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/data/breakdownhappiness.csv"
     },
     "layer": [
       {

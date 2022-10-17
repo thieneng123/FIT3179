@@ -8,7 +8,7 @@
   "width": 600,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/sg_cleanup.csv"
+    "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/data/sg_cleanup.csv"
   },
   "transform": [{"calculate": "datum.Score/4.998", "as": "Percentage"}],
   "encoding": {

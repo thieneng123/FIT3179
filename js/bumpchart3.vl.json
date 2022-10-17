@@ -8,7 +8,7 @@
   "width": 700,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/bumpchart.csv"
+    "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/data/bumpchart.csv"
   },
   "layer": [
     {
