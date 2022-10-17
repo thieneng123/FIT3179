@@ -7,6 +7,7 @@
   },
   "width": 700,
   "height": 400,
+  "background": null,
   "data": {
     "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/data/bumpchart.csv"
   },
@@ -56,7 +57,7 @@
         },
         "color": {
           "field": "Country",
-          "scale": {"scheme": "dark2"},
+          "scale": {"scheme": "category20c"},
           "legend": {"labelFontSize": 12, "titleFontSize": 12}
         },
         "opacity": {
@@ -71,5 +72,10 @@
       }
     }
   ],
-  "config": {"style": {"cell": {"stroke": "gray"}}}
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }}
 }

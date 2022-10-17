@@ -7,6 +7,7 @@
   },
   "width": 600,
   "height": 400,
+  "background": null,
   "data": {
     "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/data/southeast-asia.csv"
   },
@@ -36,6 +37,7 @@
           "field": "Country",
           "type": "nominal",
           "scale": {
+            "scheme": "category20c",
             "domain": [
               "Cambodia",
               "Indonesia",
@@ -80,5 +82,11 @@
       }
     }
   ],
-  "config": {}
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
 }

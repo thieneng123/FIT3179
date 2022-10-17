@@ -5,6 +5,7 @@
     "text": "Factors affecting Ladder Score for each countries",
     "fontSize": 16
   },
+  "background": null,
   "repeat": [
     "LogGDP",
     "Socialsupport",
@@ -48,5 +49,11 @@
       }
     ]
   },
-  "config": {}
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
 }

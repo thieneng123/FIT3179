@@ -7,6 +7,7 @@
   },
   "width": 600,
   "height": 400,
+  "background": null,
   "data": {
     "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/data/sg_cleanup.csv"
   },
@@ -16,7 +17,7 @@
     "color": {
       "field": "Factor",
       "type": "nominal",
-      "scale": {"scheme": "dark2"},
+      "scale": {"scheme": "category20c"},
       "legend": {"labelFontSize": 12, "titleFontSize": 12}
     },
     "tooltip": [
@@ -31,5 +32,11 @@
       "encoding": {"text": {"field": "Percentage", "format": ".2%"}}
     }
   ],
-  "config": {}
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    }
+  }
 }

@@ -1,8 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Worldwide Hapiness Report 2021 (Ladder Score)",
-  "width": 800,
+  "title": "Worldwide Happiness Report 2021 (Ladder Score)",
+  "width": 900,
   "height": 500,
+  "background": null,
   "projection": {"type": "equalEarth"},
   "data": {
     "url": "https://raw.githubusercontent.com/thieneng123/FIT3179/main/js/ne_110m.json",
@@ -26,12 +27,20 @@
     "color": {
       "field": "Ladder Score",
       "type": "quantitative",
-      "scale": {"type": "log"}
+      "scale": {
+        "type": "log",
+        "scheme": "oranges"
+    }
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
       {"field": "Ladder Score", "type": "quantitative"}
     ]
   },
-  "config": {}
+  "config": {
+    "style": {
+    "cell": {
+      "stroke": "transparent"
+    }
+  }}
 }
